@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - My Projects</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f7fb;
+      color: #1a202c;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    /* Header */
+    .header {
+      margin-bottom: 2.5rem;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 1.5rem;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .header p {
+      color: #475569;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+    }
+
+    /* Section title */
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-title::before {
+      content: "📁";
+      font-size: 1.4rem;
+    }
+
+    /* Projects list - simple and clean */
+    .projects-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    /* Project item - modern, minimal card */
+    .project-item {
+      background: white;
+      border-radius: 1rem;
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      transition: all 0.2s ease;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    }
+
+    .project-item:hover {
+      border-color: #cbd5e1;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transform: translateY(-1px);
+    }
+
+    /* Project info (name + optional description area) */
+    .project-info {
+      flex: 1;
+      min-width: 180px;
+    }
+
+    .project-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 0.2rem;
+    }
+
+    .project-desc {
+      font-size: 0.85rem;
+      color: #64748b;
+      margin-top: 0.2rem;
+    }
+
+    /* Links container */
+    .project-links {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* Link buttons - simple, clear */
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+      background: #f1f5f9;
+      color: #1e293b;
+      border: 1px solid #e2e8f0;
+    }
+
+    .project-link:hover {
+      background: #e2e8f0;
+      border-color: #cbd5e1;
+      transform: scale(0.97);
+    }
+
+    .project-link.demo {
+      background: #3b82f6;
+      border-color: #3b82f6;
+      color: white;
+    }
+
+    .project-link.demo:hover {
+      background: #2563eb;
+    }
+
+    .project-link.github {
+      background: #1e293b;
+      border-color: #1e293b;
+      color: white;
+    }
+
+    .project-link.github:hover {
+      background: #0f172a;
+    }
+
+    /* Simple footer */
+    .footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e2e8f0;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .container {
+        padding: 1.8rem 1rem;
+      }
+      .project-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .project-links {
+        width: 100%;
+        justify-content: flex-start;
+      }
+      .header h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Simple header for portfolio identity -->
+    <div class="header">
+      <h1>👩‍💻 Mayank Malviya</h1>
+      <p>Front-end developer & creative technologist — showcasing my work</p>
+    </div>
+
+    <!-- Projects section -->
+    <div class="section-title">Projects</div>
+    <div class="projects-list" id="projectsList">
+      <!-- Projects will be injected here via JavaScript -->
+    </div>
+
+    <div class="footer">
+      
+    </div>
+  </div>
+
+  <script>
+    // ------------------------------------------------------------------
+    // PROJECTS DATA - list of your projects with name and links
+    // Each project has:
+    // - name: Project title
+    // - description: short description (optional but nice)
+    // - demoUrl: live website / demo link
+    // - githubUrl: repository link (optional, you can leave empty)
+    // ------------------------------------------------------------------
+    const projects = [
+      {
+        name: "Landing page",
+        description: "just like a practice",
+        demoUrl: "https://mayankmalviya015.github.io/PRODIGY_WD_01/",
+        githubUrl: "https://mayankmalviya015.github.io/PRODIGY_WD_01/"
+      },
+      {
+        name: "Stop-watch",
+        description: "this project for my internship",
+        demoUrl: " https://mayankmalviya015.github.io/PRODIGY_WD_02/",
+        githubUrl: " https://mayankmalviya015.github.io/PRODIGY_WD_02/"
+      },
+      {
+        name: "tic-tac-toe",
+        description: "just for fun",
+        demoUrl: "https://mayankmalviya015.github.io/PRODIGY_WD_03/",
+        githubUrl: " https://mayankmalviya015.github.io/PRODIGY_WD_03/"
+      },
+    ];
+
+    // Get the container element
+    const projectsContainer = document.getElementById('projectsList');
+
+    // Function to render all projects
+    function renderProjects() {
+      if (!projectsContainer) return;
+
+      let html = '';
+      
+      for (let i = 0; i < projects.length; i++) {
+        const project = projects[i];
+        
+        // Build demo link button (if demoUrl exists and is not "#")
+        let demoButton = '';
+        if (project.demoUrl && project.demoUrl !== '#') {
+          demoButton = `<a href="${project.demoUrl}" target="_blank" rel="noopener noreferrer" class="project-link demo">🔗 Live Demo</a>`;
+        } else {
+          demoButton = `<span class="project-link" style="opacity:0.6; cursor:default; background:#e2e8f0;">🔗 Demo (soon)</span>`;
+        }
+        
+        // Build GitHub link button (if githubUrl exists)
+        let githubButton = '';
+        if (project.githubUrl) {
+          githubButton = `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link github">🐙 GitHub</a>`;
+        } else {
+          githubButton = ''; // no github link – just don't show anything
+        }
+        
+        // Escape description to avoid any XSS issues (simple precaution)
+        const safeDescription = escapeHtml(project.description || '');
+        const safeName = escapeHtml(project.name);
+        
+        // Build the project item HTML
+        html += `
+          <div class="project-item">
+            <div class="project-info">
+              <div class="project-name">${safeName}</div>
+              ${safeDescription ? `<div class="project-desc">${safeDescription}</div>` : ''}
+            </div>
+            <div class="project-links">
+              ${demoButton}
+              ${githubButton}
+            </div>
+          </div>
+        `;
+      }
+      
+      projectsContainer.innerHTML = html;
+    }
+    
+    // Simple helper to escape HTML special chars
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/[&<>]/g, function(m) {
+        if (m === '&') return '&amp;';
+        if (m === '<') return '&lt;';
+        if (m === '>') return '&gt;';
+        return m;
+      }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function(c) {
+        return c;
+      });
+    }
+    
+    // Render when page loads
+    document.addEventListener('DOMContentLoaded', renderProjects);
+  </script>
+</body>
+</html>
