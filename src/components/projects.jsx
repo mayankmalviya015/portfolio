@@ -8,7 +8,7 @@ const Projects = () => {
       description:
         "A secure application that stores, manages, and protects users  passwords in one centralized place. 🔐",
       technologies: ["React", "Node.js", "Tailwind CSS","JavaScript"],
-      link: "https://todolist-kappa-woad.vercel.app/",
+      link: "https://password-manager-iota-six.vercel.app/",
     },
 
     {
