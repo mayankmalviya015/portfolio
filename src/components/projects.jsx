@@ -4,6 +4,13 @@ import React from "react";
 const Projects = () => {
   const projects = [
     {
+      title: "RaiseUp",
+      description:
+        "A full-stack crowdfunding platform built with Next.js, NextAuth, and Razorpay, enabling users to create campaigns and receive secure online contributions.",
+      technologies: ["Next.js", "NextAuth", "JavaScript" ,"Razorpay"],
+      link: "https://found-chi.vercel.app/",
+    },
+    {
       title: "Password Manager",
       description:
         "A secure application that stores, manages, and protects users  passwords in one centralized place. 🔐",
@@ -26,6 +33,7 @@ const Projects = () => {
       technologies: ["HTML", "CSS", "JavaScript"],
       link: "https://tic-tac-toe-zeta-woad-10.vercel.app/",
     },
+    
   ];
 
   return (
